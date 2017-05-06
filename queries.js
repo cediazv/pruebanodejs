@@ -22,7 +22,7 @@ module.exports = {
 };
 
 function getAll(req, res, next) {
-  db.any('select * from Personas')
+  db.any('select * from "Personas"')
     .then(function (data) {
       res.status(200)
         .json({
