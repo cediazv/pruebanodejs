@@ -22,7 +22,7 @@ module.exports = {
 };
 
 function getAll(req, res, next) {
-  db.any('select * from personas')
+  db.any('select * from Personas')
     .then(function (data) {
       res.status(200)
         .json({
@@ -32,6 +32,6 @@ function getAll(req, res, next) {
         });
     })
     .catch(function (err) {
-      return next(err + '. Algo');
+      return next(err);
     });
 }
