@@ -32,6 +32,6 @@ function getAll(req, res, next) {
         });
     })
     .catch(function (err) {
-      return next(err);
+      return next(err + '. Algo');
     });
 }
